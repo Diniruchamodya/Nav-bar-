@@ -6,26 +6,45 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nav bar</title>
     <link rel="stylesheet" href="style.css">
+
 </head>
 
 <body>
 
     <nav>
         <ul class="sidebar">
-            <li><a href="#">DINIRU</a></li>
+            <li onclick=hideSidebar()>
+                <img src="close.png" width="40px" height="40px">
+            </li>
             <li><a href="#">Home</a></li>
             <li><a href="#">Vlog</a></li>
             <li><a href="#">About</a></li>
             <li><a href="#">Home</a></li>
         </ul>
-        <ul class="sidebar">
-            <li><a href="#">DINIRU</a></li>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">Vlog</a></li>
-            <li><a href="#">About</a></li>
-            <li><a href="#">Home</a></li>
+        <ul>
+            <li><a href="#"><img src="IMG.png" width="50px" height="auto"></a></li>
+            <li class="hideOnMobile"><a href="#">Home</a></li>
+            <li class="hideOnMobile"><a href="#">Vlog</a></li>
+            <li class="hideOnMobile"><a href="#">About</a></li>
+            <li class="hideOnMobile"><a href="#">Home</a></li>
+            <li onclick=showSidebar()><img src="menu.png" width="40px" height="40px"><a>
         </ul>
     </nav>
+
+
+    <script>
+        function showSidebar() {
+            const sidebar = document.querySelector('.sidebar');
+            sidebar.style.display = 'flex'
+
+        }
+        function hideSiderbar() {
+            const sidebar = document.querySelector('.sidebar');
+            sidebar.style.display = 'flex'
+        }
+    </script>
+
 </body>
+
 
 </html>
